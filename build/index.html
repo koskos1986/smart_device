@@ -1,13 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
+  <meta name="description" content="Производим печатные платы и запчасти к ним">
+  <title>Печатные платы</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font">
 </head>
+
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="header">
+    <div class="header__wrapper">
+      <a href="" class="header__logo">
+        <svg>
+          <use></use>
+        </svg>
+      </a>
+      <div class="header__contacts">
+        <a href="" class="header__mail">
+          <svg>
+            <use></use>
+          </svg>
+          <span>info@sd.ru</span>
+        </a>
+        <a href="" class="header__phone">
+          <svg>
+            <use></use>
+          </svg>
+          <span>+7 (495) 000 52 52</span>
+        </a>
+      </div>
+      <button class="header__button">Заказать звонок</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="lead">
+      <div class="lead__container container">
+        <h1 class="lead__heading">Печатные платы</h1>
+        <p class="lead__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a href="#feedback" class="lead__link button">Получить бесплатную консультацию</a>
+        <a href="#features" class="lead__scroll">Скролл вниз</a>
+      </div>
+      <div class="lead__img">
+        <picture>
+          <img src="" alt="">
+        </picture>
+      </div>
+    </section>
+    <section class="features" id="features">
+      <h2 class="visually-hidden">Преимущества</h2>
+      <div class="features__container container">
+        <ul class="features__list">
+          <li class="features__item">
+            <svg>
+              <use></use>
+            </svg>
+            <h3 class="features__heading">Оперативные сроки</h3>
+            <p class="features__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+          </li>
+          <li class="features__item">
+            <svg>
+              <use></use>
+            </svg>
+            <h3 class="features__heading">Крупные поставщики</h3>
+            <p class="features__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+          </li>
+          <li class="features__item">
+            <svg>
+              <use></use>
+            </svg>
+            <h3 class="features__heading">Полная конфиденциальность</h3>
+            <p class="features__text">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+          </li>
+          <li class="features__item">
+            <svg>
+              <use></use>
+            </svg>
+            <h3 class="features__heading">Персонализация стоимости</h3>
+            <p class="features__text">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__container container">
+        <h2 class="about__heading">О компании</h2>
+        <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+        <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
+          <span class="about__hidden">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
+          <span class="about__dots">..</span>
+        </p>
+        <button class="about__button button">подробнее</button>
+      </div>
+    </section>
+    <section class="services">
+      <div class="services__container container">
+        <h2 class="services__heading">Service Device предлагает следующие товары и услуги</h2>
+        <ul class="services__list">
+          <li class="services__item">
+            <a href="" class="services__link">
+              <h3 class="services__link-heading">Производство печатных плат</h3>
+              <picture>
+                <img src="" alt="">
+              </picture>
+            </a>
+          </li>
+          <li class="services__item">
+            <a href="" class="services__link">
+              <h3 class="services__link-heading">Монтаж печатных плат</h3>
+              <picture>
+                <img src="" alt="">
+              </picture>
+            </a>
+          </li>
+          <li class="services__item">
+            <a href="" class="services__link">
+              <h3 class="services__link-heading">Комплектующие для светотехники</h3>
+              <picture>
+                <img src="" alt="">
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="feedback" id="feedback">
+      <div class="feedback__container container">
+        <div class="feedback__image-wrapper">
+          <picture>
+            <img src="" alt="">
+          </picture>
+        </div>
+        <h2 class="feedback__heading">Остались вопросы? Задайте их нам!</h2>
+        <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
+        <form action="" class="feedback__form">
+          <label for="">
+            <input type="text">
+          </label>
+          <label for="">
+            <input type="text">
+          </label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <button feedback__form-button="" button="">Задать вопрос</button>
+          <label for="">
+            <input type="text" checked="">
+            <span>Я согласен на обработку  персональных данных</span>
+          </label>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"></footer>
 </body>
 </html>
