@@ -1,0 +1,38 @@
+@mixin button-reset {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+@mixin style-reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin list-reset {
+  @include style-reset;
+  list-style-type: none;
+}
+
+@mixin heading {
+  font-weight: $regular;
+  font-size: 36px;
+  line-height: 50.63px;
+  text-align: left;
+  color: $white;
+
+  @include tablet {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 39.38px;
+  }
+}
+
+@mixin margin-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
