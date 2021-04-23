@@ -36,3 +36,13 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@mixin padding-tablet {
+  padding-right: $padding-tablet;
+  padding-left: $padding-tablet;
+}
+
+@mixin padding-mobile {
+  padding-right: $padding-mobile;
+  padding-left: $padding-mobile;
+}

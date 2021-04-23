@@ -1,0 +1,43 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.header__wrapper {
+  display: flex;
+  max-width: 1411px;
+  padding-top: 33px;
+  padding-right: 256px;
+  padding-left: 253px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include tablet {
+    @include padding-tablet;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  @include mobile {
+    padding-top: 17px;
+    padding-right: $padding-mobile;
+    padding-bottom: 5px;
+    padding-left: 17px;
+  }
+}
+
+.header__contacts {
+  margin-left: auto;
+}
+
+.header-link span {
+  @include tablet {
+    display: none;
+  }
+}
+
+.header__button {
+  @include button-reset;
+}
