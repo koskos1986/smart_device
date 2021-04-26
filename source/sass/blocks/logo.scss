@@ -1,0 +1,12 @@
+.logo__desktop {
+  @include mobile{
+    display: none;
+  }
+}
+
+.logo__mobile {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}

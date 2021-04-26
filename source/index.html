@@ -16,27 +16,29 @@
     <div class="header__wrapper">
       <a class="logo" aria-label="Логотип компании Smart Device">
         <svg class="logo__desktop" width="202" height="52">
-          <use xlink:href="img/sprite_auto.svg#logo-desktop"></use>
+          <use xlink:href="img/sprite-auto.svg#logo-desktop"></use>
         </svg>
         <svg class="logo__mobile" width="38" height="38">
-          <use xlink:href="img/sprite_auto.svg#logo"></use>
+          <use xlink:href="img/sprite-auto.svg#logo"></use>
         </svg>
       </a>
       <div class="header__contacts">
-        <a class="header__link header__link--mail" href="mailto:info@sd.ru" aria-label="Почта компании Smart Device">
-          <svg width="26" height="19">
-            <use xlink:href="img/sprite_auto.svg#icon-email"></use>
-          </svg>
-          <span>info@sd.ru</span>
-        </a>
-        <a class="header__link header__link--phone" href="tel:+74950005252" aria-label="Телефон компании Smart Device">
-          <svg width="24" height="24">
-            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
-          </svg>
-          <span>+7 (495) 000 52 52</span>
-        </a>
+        <div class="header__contacts-wrapper">
+          <a class="header__link header__link--mail" href="mailto:info@sd.ru" aria-label="Почта компании Smart Device">
+            <svg width="26" height="19">
+              <use xlink:href="img/sprite-auto.svg#icon-email"></use>
+            </svg>
+            <span>info@sd.ru</span>
+          </a>
+          <a class="header__link header__link--phone" href="tel:+74950005252" aria-label="Телефон компании Smart Device">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite-auto.svg#icon-phone"></use>
+            </svg>
+            <span>+7 (495) 000 52 52</span>
+          </a>
+        </div>
+        <button class="header__button button button--transparent">Заказать звонок</button>
       </div>
-      <button class="header__button button button--transparent">Заказать звонок</button>
     </div>
   </header>
 
@@ -61,52 +63,54 @@
         </picture>
       </div>
     </section>
-    <section class="features" id="features">
-      <h2 class="visually-hidden">Преимущества</h2>
-      <div class="features__container container">
-        <ul class="features__list">
-          <li class="features__item">
-            <svg width="29.5" height="36">
-              <use xlink:href="img/sprite_auto.svg#icon-watch"></use>
-            </svg>
-            <h3 class="features__heading">Оперативные сроки</h3>
-            <p class="features__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
-          </li>
-          <li class="features__item">
-            <svg width="35" height="35">
-              <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
-            </svg>
-            <h3 class="features__heading">Крупные поставщики</h3>
-            <p class="features__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
-          </li>
-          <li class="features__item">
-            <svg width="36" height="31">
-              <use xlink:href="img/sprite_auto.svg#icon-detective"></use>
-            </svg>
-            <h3 class="features__heading">Полная конфиденциальность</h3>
-            <p class="features__text">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
-          </li>
-          <li class="features__item">
-            <svg width="35" height="35">
-              <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
-            </svg>
-            <h3 class="features__heading">Персонализация стоимости</h3>
-            <p class="features__text">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="about">
-      <div class="about__container container">
-        <h2 class="about__heading">О компании</h2>
-        <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-        <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
-          <span class="about__hidden">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
-          <span class="about__dots">..</span>
-        </p>
-        <button class="about__button button">подробнее</button>
-      </div>
-    </section>
+    <div class="main__container">
+      <section class="features" id="features">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <div class="features__container container">
+          <ul class="features__list">
+            <li class="features__item">
+              <svg width="29.5" height="36">
+                <use xlink:href="img/sprite-auto.svg#icon-watch"></use>
+              </svg>
+              <h3 class="features__heading">Оперативные сроки</h3>
+              <p class="features__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+            </li>
+            <li class="features__item">
+              <svg width="35" height="35">
+                <use xlink:href="img/sprite-auto.svg#icon-hired"></use>
+              </svg>
+              <h3 class="features__heading">Крупные поставщики</h3>
+              <p class="features__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+            </li>
+            <li class="features__item">
+              <svg width="36" height="31">
+                <use xlink:href="img/sprite-auto.svg#icon-detective"></use>
+              </svg>
+              <h3 class="features__heading">Полная конфиденциальность</h3>
+              <p class="features__text">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+            </li>
+            <li class="features__item">
+              <svg width="35" height="35">
+                <use xlink:href="img/sprite-auto.svg#icon-tag"></use>
+              </svg>
+              <h3 class="features__heading">Персонализация стоимости</h3>
+              <p class="features__text">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container container">
+          <h2 class="about__heading">О компании</h2>
+          <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+          <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
+            <span class="about__hidden">(РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
+            <span class="about__dots">..</span>
+          </p>
+          <button class="about__button button">подробнее</button>
+        </div>
+      </section>
+    </div>
     <section class="services">
       <div class="services__container container">
         <h2 class="services__heading">Service Device предлагает следующие товары и услуги</h2>
@@ -161,17 +165,9 @@
     </section>
     <section class="feedback" id="feedback">
       <div class="feedback__container container">
-        <div class="feedback__image-wrapper">
-          <picture>
-            <!-- 1x: 511px; 2x: 1022px -->
-            <source type="image/webp" srcset="img/paper-airplane-desktop@1x.webp, img/paper-airplane-desktop@2x.webp 2x">
-            <!-- 1x: 511px; 2x: 1022px -->
-            <img width="511" height="288" src="img/paper-airplane-desktop@1x.png" srcset="img/paper-airplane-desktop@2x.png 2x" alt="Бумажный самолет">
-          </picture>
-        </div>
         <h2 class="feedback__heading">Остались вопросы? Задайте их нам!</h2>
         <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
-        <form action="https://echo.htmlacademy.ru" method="POST">
+        <form class="form" action="https://echo.htmlacademy.ru" method="POST">
           <label>
             <input name="name" type="text" placeholder="Имя" required>
           </label>
@@ -180,11 +176,17 @@
           </label>
           <textarea name="question" placeholder="Ваш вопрос"></textarea>
           <button class="feedback__form-button button">Задать вопрос</button>
-          <label>
+          <label class="form__checkbox">
             <input name="consent" type="checkbox" checked required>
             <span>Я согласен на обработку  персональных данных</span>
           </label>
         </form>
+        <picture>
+          <!-- 1x: 511px; 2x: 1022px -->
+          <source type="image/webp" srcset="img/paper-airplane-desktop@1x.webp, img/paper-airplane-desktop@2x.webp 2x">
+          <!-- 1x: 511px; 2x: 1022px -->
+          <img width="511" height="288" src="img/paper-airplane-desktop@1x.png" srcset="img/paper-airplane-desktop@2x.png 2x" alt="Бумажный самолет">
+        </picture>
       </div>
     </section>
   </main>
@@ -195,7 +197,7 @@
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <a class="logo logo--footer" aria-label="Логотип Smart Device">
           <svg width="216" height="52">
-            <use xlink:href="img/sprite_auto.svg#logo-footer"></use>
+            <use xlink:href="img/sprite-auto.svg#logo-footer"></use>
           </svg>
         </a>
         <p class="footer__social-text">1999-2018 SD Service Devices</p>
@@ -203,21 +205,21 @@
           <li class="social__item">
             <a class="social__link" href="#" target="_blank" aria-label="Переход на нашу страницу в Facebook">
               <svg width="27" height="27">
-                <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+                <use xlink:href="img/sprite-auto.svg#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" target="_blank" aria-label="Переход на нашу страницу в Одноклассники">
               <svg width="27" height="26">
-                <use xlink:href="img/sprite_auto.svg#icon-classmates"></use>
+                <use xlink:href="img/sprite-auto.svg#icon-classmates"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" target="_blank" aria-label="Переход на нашу страницу в Контакте">
               <svg width="27" height="26">
-                <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+                <use xlink:href="img/sprite-auto.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -227,7 +229,7 @@
         <button class="accordeon__button--close" type="button" aria-label="Открыть или закрыть блок">
           <h2 class="nav__heading">Разделы сайта</h2>
           <svg width="16" height="16">
-            <use xlink:href="img/sprite_auto.svg#icon-button-plus"></use>
+            <use xlink:href="img/sprite-auto.svg#icon-button-plus"></use>
           </svg>
         </button>
         <ul class="nav__list">
@@ -258,7 +260,7 @@
         <button class="accordeon__button--close" type="button" aria-label="Открыть или закрыть блок">
           <h2 class="contacts__heading">Наш офис</h2>
           <svg width="16" height="16">
-            <use xlink:href="img/sprite_auto.svg#icon-button-plus"></use>
+            <use xlink:href="img/sprite-auto.svg#icon-button-plus"></use>
           </svg>
         </button>
         <ul class="contacts__list">

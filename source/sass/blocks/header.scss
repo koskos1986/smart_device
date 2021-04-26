@@ -7,10 +7,10 @@
 
 .header__wrapper {
   display: flex;
-  max-width: 1411px;
+  max-width: 1920px;
   padding-top: 33px;
-  padding-right: 256px;
-  padding-left: 253px;
+  padding-right: 13.3%;
+  padding-left: 13.3%;
   margin-right: auto;
   margin-left: auto;
 
@@ -29,15 +29,150 @@
 }
 
 .header__contacts {
-  margin-left: auto;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-right: 3px;
+  padding-bottom: 6px;
+
+  @include tablet {
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+
+  @include mobile {
+    padding-bottom: 4px;
+  }
 }
 
-.header-link span {
+.header__contacts-wrapper {
+  width: 430px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include tablet {
+    width: auto;
+    margin-right: -12px;
+  }
+
+  @include mobile {
+    margin-right: -5px;
+  }
+}
+
+.header__link {
+  display: block;
+  position: relative;
+  margin-right: 88px;
+
+  @include tablet {
+    line-height: 0;
+    padding: 12px;
+    margin-right: 0;
+  }
+
+  @include mobile {
+    padding: 5px;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 0;
+
+    @include tablet {
+      margin-left: 8px;
+    }
+
+    @include mobile {
+      margin-left: 12px;
+    }
+  }
+}
+
+.header__link:hover span,
+.header_link:focus span {
+  @include animation;
+  color: $primary-blue;
+}
+
+.header__link:active span {
+  color: $primary-blue-05;
+}
+
+.header__link:active svg {
+  fill: $primary-blue-05;
+}
+
+.header__link span {
+  display: block;
+  padding-top: $padding-mobile;
+  padding-bottom: $padding-mobile ;
+  font-family: $font-family-secondary;
+  font-size: $font-size;
+  font-weight: $regular;
+  line-height: 18px;
+  color: $white;
+
   @include tablet {
     display: none;
   }
 }
 
+.header__link svg {
+  position: absolute;
+  top: 19px;
+  left: 0;
+
+  @include tablet {
+    position: static;
+  }
+}
+
+.header__link--mail svg {
+  width: 20px;
+  height: 14px;
+
+  @include tablet {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header__link--phone svg {
+  width: 18px;
+  height: 18px;
+
+  @include tablet {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header__link--mail span {
+  padding-left: 39px;
+}
+
+.header__link--phone span {
+  padding-left: 34px;
+}
+
 .header__button {
   @include button-reset;
+  display: block;
+  width: 180px;
+  height: 45px;
+  padding-right: 10px;
+  padding-left: 12px;
+  margin-left: 4.1%;
+  font-size: 14px;
+  line-height: 16.41px;
+  letter-spacing: 5%;
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  @include tablet {
+    display: none;
+  }
 }

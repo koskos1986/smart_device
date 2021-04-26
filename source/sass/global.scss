@@ -54,11 +54,5 @@ body {
   font-weight: $bold ;
   color: $white;
   background-color: transparent;
-
-  &--transparent {
-    font-size: 14px;
-    line-height: 16.41px;
-    letter-spacing: 5%;
-    border: 1px solid $white;
-  }
+  text-transform: uppercase;
 }

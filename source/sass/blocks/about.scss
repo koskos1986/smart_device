@@ -1,0 +1,102 @@
+.about {
+  width: 100%;
+}
+
+.about__container {
+  position: relative;
+  width: 60.9%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 76px;
+  padding-right: 18px;
+  padding-bottom: 9px;
+  padding-left: 180px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include tablet {
+    width: 93.5%;
+    padding-top: 27px;
+    padding-right: 0;
+    padding-bottom: 3px;
+    padding-left: 185px;
+  }
+
+  @include mobile {
+    width: 91%;
+    padding-top: 36px;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: -30px;
+    display: block;
+    width: 220px;
+    height: 317px;
+    background-image: url("../img/year-desktop@1x.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/year-desktop@2x.webp");
+    }
+
+    @include tablet {
+      top: 25px;
+      left: -33px;
+      width: 250px;
+      height: 361px;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.about__heading {
+  @include style-reset;
+  @include heading;
+  margin-bottom: 18px;
+  color: $secondary-dark;
+}
+
+.about__text {
+  @include style-reset;
+  margin-bottom: 35px;
+  font-family: $font-family-secondary;
+  font-size: $font-size;
+  font-weight: $regular;
+  line-height: 22px;
+  text-align: left;
+}
+.about__hidden {
+  @include tablet {
+    display: none;
+  }
+}
+.about__dots {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+  }
+}
+
+.about__button {
+  display: block;
+  width: 180px;
+  height: 45px;
+  padding-right: 10px;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 16.41px;
+  letter-spacing: 5%;
+  border: 1px solid $primary-blue;
+  border-radius: 5px;
+  color: $primary-blue;
+}

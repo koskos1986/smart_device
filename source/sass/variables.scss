@@ -2,13 +2,14 @@
 $mobile-width: 767px;
 $tablet-width: 1023px;
 $desktop-width: 1920px;
-$retina-2x: 2 dpx;
+$retina-2x: 2dppx;
 $padding-mobile: 15px;
 $padding-tablet: 25px;
 
 // Colors
 $white: #ffffff;
 $primary-blue: #00b2ff;
+$primary-blue-05: rgba(0, 178, 255, 0.5);
 $primary-dark: #1b2d37;
 $secondary-dark: #666666;
 $gray-icon: #cdcdcd;
@@ -16,6 +17,10 @@ $primary-logo-dark: #203c42;
 $secondary-logo-dark: #788891;
 $gray-border-primary: #626962;
 $gray-border-secondary: #ebebeb;
+$color-white-01: rgba(255, 255, 255, 0.1);
+$color-white-02: rgba(255, 255, 255, 0.2);
+$color-white-03: rgba(255, 255, 255, 0.3);
+$color-white-08: rgba(255, 255, 255, 0.8);
 
 // fonts
 $font-family-primary: "Roboto Condensed", "Arial", sans-serif;

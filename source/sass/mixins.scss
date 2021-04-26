@@ -46,3 +46,7 @@
   padding-right: $padding-mobile;
   padding-left: $padding-mobile;
 }
+
+@mixin animation {
+  transition: all 0.3s ease;
+}
