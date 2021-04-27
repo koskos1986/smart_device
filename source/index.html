@@ -192,7 +192,7 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__container container">
+    <div class="footer__container">
       <section class="footer__social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <a class="logo logo--footer" aria-label="Логотип Smart Device">
@@ -225,36 +225,40 @@
           </li>
         </ul>
       </section>
-      <section class="nav">
-        <button class="accordeon__button--close" type="button" aria-label="Открыть или закрыть блок">
-          <h2 class="nav__heading">Разделы сайта</h2>
+      <section class="footer-navigation">
+        <button class="footer-navigation__button footer-navigation__button--close" type="button" aria-label="Открыть или закрыть блок">
+          <h2 class="footer-navigation__heading">Разделы сайта</h2>
           <svg width="16" height="16">
             <use xlink:href="img/sprite-auto.svg#icon-button-plus"></use>
           </svg>
         </button>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">О компании</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Продукты</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Производство печатных плат</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Монтаж печатных плат</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Комплектующие</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Доставка</a>
-          </li>
-          <li class="nav__item">
-            <a href="" class="nav__link">Контакты</a>
-          </li>
-        </ul>
+        <nav class="nav">
+          <ul class="nav__list nav__list--left">
+            <li class="nav__item">
+              <a href="#" class="nav__link">О компании</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Продукты</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Производство печатных плат</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Монтаж печатных плат</a>
+            </li>
+          </ul>
+          <ul class="nav__list nav__list--right">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Комплектующие</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Доставка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </section>
       <section class="contacts">
         <button class="accordeon__button--close" type="button" aria-label="Открыть или закрыть блок">
@@ -263,21 +267,15 @@
             <use xlink:href="img/sprite-auto.svg#icon-button-plus"></use>
           </svg>
         </button>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <a href="" class="contacts__link">г. Мытищи, Олимпийский проспект, д.10</a>
-          </li>
-          <li class="contacts__item">
-            <a href="tel:+74955894050" class="contacts__link">+7 (495) 589-40-50</a>
-          </li>
-          <li class="contacts__item">
-            <a href="tel:+79250038767" class="contacts__link">+7 (925) 003-87-67</a>
-          </li>
-          <li class="contacts__item">
-            <a href="tel:+792692608079" class="contacts__link">+7 (926) 926-080-79</a>
-          </li>
-        </ul>
+        <div class="contacts__wrapper">
+          <span>г. Мытищи, Олимпийский проспект, д.10</span>
+          <a href="tel:+74955894050" class="contacts__link">+7 (495) 589-40-50</a>
+          <a href="tel:+79250038767" class="contacts__link">+7 (925) 003-87-67</a>
+          <a href="tel:+792692608079" class="contacts__link">+7 (926) 926-080-79</a>
+        </div>
       </section>
+    </div>
+    <div class="footer__container container">
       <section class="footer__copyright copyright">
         <h2 class="visually-hidden">Копирайт</h2>
         <span class="copyright__wrapper">

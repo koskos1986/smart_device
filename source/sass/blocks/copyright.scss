@@ -1,0 +1,35 @@
+.copyright a,
+.copyright span {
+  font-family: $font-family-secondary;
+  font-size: 13px;
+  line-height: 185%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $primary-dark;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.copyright a {
+  width: 34%;
+  margin-left: -65px;
+
+  @media (max-width: 1200px) {
+    width: 31%;
+    margin-left: 0;
+  }
+
+  @include mobile {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+}
+
+.copyright span {
+  margin-right: 65px;
+
+  @include tablet {
+    display: none;
+  }
+}

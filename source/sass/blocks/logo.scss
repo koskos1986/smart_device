@@ -1,3 +1,28 @@
+.logo {
+  margin-right: 30px;
+
+  @include mobile {
+    margin-right: 0;
+    margin-left: 2px;
+  }
+
+  &--footer {
+    width: 216px;
+    height: 52px;
+    margin-right: 0;
+    margin-bottom: 55px;
+
+    @include tablet {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
+    @include mobile {
+      margin-bottom: 26px;
+    }
+  }
+}
+
 .logo__desktop {
   @include mobile{
     display: none;

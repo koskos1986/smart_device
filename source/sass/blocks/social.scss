@@ -1,0 +1,47 @@
+.social {
+  @include list-reset;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include tablet {
+    width: 15.5%;
+    padding-top: 6px;
+  }
+
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.social__item {
+  @include style-reset;
+  margin-right: 15px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: block;
+  line-height: 0;
+}
+
+.social__link:hover svg,
+.social__link:focus svg {
+  @include animation;
+  fill: $primary-blue;
+}
+
+.social__link:active svg {
+  @include animation;
+  fill: $primary-blue-05;
+}
+
+.social__item svg {
+  fill: $gray-icon;
+}
