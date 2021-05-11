@@ -6,9 +6,11 @@
   padding-bottom: 62px;
 
   @include tablet {
+    margin-top: 38px;
     width: 48%;
   }
   @include mobile {
+    @include padding-mobile;
     width: 100%;
   }
 }
