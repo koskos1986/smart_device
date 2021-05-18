@@ -259,10 +259,10 @@ function polyfill() {
             : w.scrollY || w.pageYOffset
       );
 
-       return;
+        return;
     }
 
-     // LET THE SMOOTHNESS BEGIN!
+    // LET THE SMOOTHNESS BEGIN!
     smoothScroll.call(
       w,
       d.body,
@@ -275,14 +275,14 @@ function polyfill() {
     );
   };
 
-   // w.scrollBy
+  // w.scrollBy
   w.scrollBy = function() {
     // avoid action when no arguments are passed
     if (arguments[0] === undefined) {
       return;
     }
 
-     // avoid smooth behavior if not required
+    // avoid smooth behavior if not required
     if (shouldBailOut(arguments[0])) {
       original.scrollBy.call(
         w,
@@ -294,10 +294,10 @@ function polyfill() {
           : arguments[1] !== undefined ? arguments[1] : 0
       );
 
-       return;
+        return;
     }
 
-     // LET THE SMOOTHNESS BEGIN!
+    // LET THE SMOOTHNESS BEGIN!
     smoothScroll.call(
       w,
       d.body,
@@ -306,21 +306,21 @@ function polyfill() {
     );
   };
 
-   // Element.prototype.scroll and Element.prototype.scrollTo
+  // Element.prototype.scroll and Element.prototype.scrollTo
   Element.prototype.scroll = Element.prototype.scrollTo = function() {
     // avoid action when no arguments are passed
     if (arguments[0] === undefined) {
       return;
     }
 
-     // avoid smooth behavior if not required
+    // avoid smooth behavior if not required
     if (shouldBailOut(arguments[0]) === true) {
       // if one number is passed, throw error to match Firefox implementation
       if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
         throw new SyntaxError('Value could not be converted');
       }
 
-       original.elementScroll.call(
+        original.elementScroll.call(
         this,
         // use left prop, first number argument or fallback to scrollLeft
         arguments[0].left !== undefined
@@ -332,13 +332,13 @@ function polyfill() {
           : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
       );
 
-       return;
+        return;
     }
 
     var left = arguments[0].left;
     var top = arguments[0].top;
 
-     // LET THE SMOOTHNESS BEGIN!
+    // LET THE SMOOTHNESS BEGIN!
     smoothScroll.call(
       this,
       this,
@@ -347,14 +347,14 @@ function polyfill() {
     );
   };
 
-   // Element.prototype.scrollBy
+  // Element.prototype.scrollBy
   Element.prototype.scrollBy = function() {
     // avoid action when no arguments are passed
     if (arguments[0] === undefined) {
       return;
     }
 
-     // avoid smooth behavior if not required
+    // avoid smooth behavior if not required
     if (shouldBailOut(arguments[0]) === true) {
       original.elementScroll.call(
         this,
@@ -366,7 +366,7 @@ function polyfill() {
           : ~~arguments[1] + this.scrollTop
       );
 
-       return;
+        return;
     }
 
     this.scroll({
@@ -376,7 +376,7 @@ function polyfill() {
     });
   };
 
-   // Element.prototype.scrollIntoView
+  // Element.prototype.scrollIntoView
   Element.prototype.scrollIntoView = function() {
     // avoid smooth behavior if not required
     if (shouldBailOut(arguments[0]) === true) {
@@ -385,15 +385,15 @@ function polyfill() {
         arguments[0] === undefined ? true : arguments[0]
       );
 
-       return;
+        return;
     }
 
-     // LET THE SMOOTHNESS BEGIN!
+    // LET THE SMOOTHNESS BEGIN!
     var scrollableParent = findScrollableParent(this);
     var parentRects = scrollableParent.getBoundingClientRect();
     var clientRects = this.getBoundingClientRect();
 
-     if (scrollableParent !== d.body) {
+      if (scrollableParent !== d.body) {
       // reveal element inside parent
       smoothScroll.call(
         this,
@@ -402,7 +402,7 @@ function polyfill() {
         scrollableParent.scrollTop + clientRects.top - parentRects.top
       );
 
-       // reveal parent in viewport unless is fixed
+      // reveal parent in viewport unless is fixed
       if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
         w.scrollBy({
           left: parentRects.left,
@@ -1124,14 +1124,14 @@ if (typeof exports === 'object' && typeof module !== 'undefined') {
   var engineUserAgent = getBuiltIn('navigator', 'userAgent') || '';
 
   // https://github.com/zloirock/core-js/issues/280
-   // eslint-disable-next-line unicorn/no-unsafe-regex
+  // eslint-disable-next-line unicorn/no-unsafe-regex
 
 
   var stringPadWebkitBug = /Version\/10\.\d+(\.\d+)?( Mobile\/\w+)? Safari\//.test(engineUserAgent);
 
   var $padEnd = stringPad.end;
 
-   // `String.prototype.padEnd` method
+  // `String.prototype.padEnd` method
   // https://tc39.es/ecma262/#sec-string.prototype.padend
 
 
@@ -1149,7 +1149,7 @@ if (typeof exports === 'object' && typeof module !== 'undefined') {
 
   var $padStart = stringPad.start;
 
-   // `String.prototype.padStart` method
+  // `String.prototype.padStart` method
   // https://tc39.es/ecma262/#sec-string.prototype.padstart
 
 
