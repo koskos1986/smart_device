@@ -52,6 +52,7 @@
       width: 250px;
       height: 361px;
     }
+
     @include mobile {
       display: none;
     }
@@ -74,11 +75,13 @@
   line-height: 22px;
   text-align: left;
 }
+
 .about__hidden {
   @include tablet {
     display: none;
   }
 }
+
 .about__dots {
   display: none;
 

@@ -1,6 +1,7 @@
 .features {
   width: 100%;
 }
+
 .features__container {
   @include margin-auto;
   max-width: $desktop-width;
@@ -51,7 +52,7 @@
   margin-right: 0;
 }
 
-.features__item svg{
+.features__item svg {
   margin-bottom: 23px;
 }
 

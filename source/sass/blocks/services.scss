@@ -108,7 +108,7 @@
     width: 63px;
     height: 63px;
     background-color: $primary-blue;
-    background-image: url(../img/icon-right-arrow.svg);
+    background-image: url("../img/icon-right-arrow.svg");
     background-position: 31px 27px;
     background-repeat: no-repeat;
   }
@@ -117,7 +117,7 @@
 .services__item a:hover,
 .services__item a:focus {
   @include animation;
-  background-color: rgba(98,105,98,.3);
+  background-color: rgba(98, 105, 98, 0.3);
 }
 
 .services__link-heading {

@@ -7,7 +7,7 @@ function polyfill() {
   var w = window;
   var d = document;
 
-   // return if scroll behavior is supported and polyfill is not forced
+    // return if scroll behavior is supported and polyfill is not forced
   if (
     'scrollBehavior' in d.documentElement.style &&
     w.__forceSmoothScrollPolyfill__ !== true
@@ -15,11 +15,11 @@ function polyfill() {
     return;
   }
 
-   // globals
+    // globals
   var Element = w.HTMLElement || w.Element;
   var SCROLL_TIME = 468;
 
-   // object gathering original scroll methods
+    // object gathering original scroll methods
   var original = {
     scroll: w.scroll || w.scrollTo,
     scrollBy: w.scrollBy,
@@ -27,13 +27,13 @@ function polyfill() {
     scrollIntoView: Element.prototype.scrollIntoView
   };
 
-   // define timing method
+    // define timing method
   var now =
     w.performance && w.performance.now
       ? w.performance.now.bind(w.performance)
       : Date.now;
 
-   /**
+    /**
    * indicates if a the current browser is made by Microsoft
    * @method isMicrosoftBrowser
    * @param {String} userAgent
@@ -42,17 +42,17 @@ function polyfill() {
   function isMicrosoftBrowser(userAgent) {
     var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
 
-     return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+      return new RegExp(userAgentPatterns.join('|')).test(userAgent);
   }
 
-   /*
+    /*
    * IE has rounding bug rounding down clientHeight and clientWidth and
    * rounding up scrollHeight and scrollWidth causing false positives
    * on hasScrollableSpace
    */
   var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
 
-   /**
+    /**
    * changes scroll position inside an element
    * @method scrollElement
    * @param {Number} x
@@ -64,7 +64,7 @@ function polyfill() {
     this.scrollTop = y;
   }
 
-   /**
+    /**
    * returns result of applying ease math function to a number
    * @method ease
    * @param {Number} k
@@ -74,7 +74,7 @@ function polyfill() {
     return 0.5 * (1 - Math.cos(Math.PI * k));
   }
 
-   /**
+    /**
    * indicates if a smooth behavior should be applied
    * @method shouldBailOut
    * @param {Number|Object} firstArg
@@ -93,12 +93,12 @@ function polyfill() {
       return true;
     }
 
-     if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+      if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
       // first argument is an object and behavior is smooth
       return false;
     }
 
-     // throw error when behavior is not supported
+      // throw error when behavior is not supported
     throw new TypeError(
       'behavior member of ScrollOptions ' +
         firstArg.behavior +
@@ -106,7 +106,7 @@ function polyfill() {
     );
   }
 
-   /**
+    /**
    * indicates if an element has scrollable space in the provided axis
    * @method hasScrollableSpace
    * @param {Node} el
@@ -118,12 +118,12 @@ function polyfill() {
       return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
     }
 
-     if (axis === 'X') {
+      if (axis === 'X') {
       return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
     }
   }
 
-   /**
+    /**
    * indicates if an element has a scrollable overflow property in the axis
    * @method canOverflow
    * @param {Node} el
@@ -133,10 +133,10 @@ function polyfill() {
   function canOverflow(el, axis) {
     var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
 
-     return overflowValue === 'auto' || overflowValue === 'scroll';
+      return overflowValue === 'auto' || overflowValue === 'scroll';
   }
 
-   /**
+    /**
    * indicates if an element can be scrolled in either axis
    * @method isScrollable
    * @param {Node} el
@@ -150,7 +150,7 @@ function polyfill() {
     return isScrollableY || isScrollableX;
   }
 
-   /**
+    /**
    * finds scrollable parent of an element
    * @method findScrollableParent
    * @param {Node} el
@@ -161,10 +161,10 @@ function polyfill() {
       el = el.parentNode || el.host;
     }
 
-     return el;
+      return el;
   }
 
-   /**
+    /**
    * self invoked function that, given a context, steps through scrolling
    * @method step
    * @param {Object} context
@@ -177,24 +177,24 @@ function polyfill() {
     var currentY;
     var elapsed = (time - context.startTime) / SCROLL_TIME;
 
-     // avoid elapsed times higher than one
+      // avoid elapsed times higher than one
     elapsed = elapsed > 1 ? 1 : elapsed;
 
-     // apply easing to elapsed time
+      // apply easing to elapsed time
     value = ease(elapsed);
 
-     currentX = context.startX + (context.x - context.startX) * value;
+    currentX = context.startX + (context.x - context.startX) * value;
     currentY = context.startY + (context.y - context.startY) * value;
 
-     context.method.call(context.scrollable, currentX, currentY);
+    context.method.call(context.scrollable, currentX, currentY);
 
-     // scroll more if we have not reached our destination
+      // scroll more if we have not reached our destination
     if (currentX !== context.x || currentY !== context.y) {
       w.requestAnimationFrame(step.bind(w, context));
     }
   }
 
-   /**
+    /**
    * scrolls window or element with a smooth behavior
    * @method smoothScroll
    * @param {Object|Node} el
@@ -209,7 +209,7 @@ function polyfill() {
     var method;
     var startTime = now();
 
-     // define scroll context
+      // define scroll context
     if (el === d.body) {
       scrollable = w;
       startX = w.scrollX || w.pageXOffset;
@@ -222,7 +222,7 @@ function polyfill() {
       method = scrollElement;
     }
 
-     // scroll looping over a frame
+      // scroll looping over a frame
     step({
       scrollable: scrollable,
       method: method,
@@ -234,7 +234,7 @@ function polyfill() {
     });
   }
 
-   // ORIGINAL METHODS OVERRIDES
+    // ORIGINAL METHODS OVERRIDES
   // w.scroll and w.scrollTo
   w.scroll = w.scrollTo = function() {
     // avoid action when no arguments are passed
@@ -242,7 +242,7 @@ function polyfill() {
       return;
     }
 
-     // avoid smooth behavior if not required
+      // avoid smooth behavior if not required
     if (shouldBailOut(arguments[0]) === true) {
       original.scroll.call(
         w,
